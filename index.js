@@ -109,14 +109,14 @@ inquirer.prompt([
     <h1 class="name"> Engineer:<br>${response.engineerName} </h1>
     <p class="idnum"> ID:${response.engineerId} </p>
 
-    <p class="Email"> Email:${response.engineeremail}</p>
-    <p class="num"> Github:${response.Github}</p>
+    <p class="Email">Email:${response.engineeremail}</p>
+    <p class="num"><a href="https://github.com/purnagurung903" target="_blank"> Github:${response.Github}</a></p>
     </div>
     <div class="col" style="width: 18rem;  margin: 20px; padding-bottom: 20px; background-color: lightgray;">
     <h1 class="name"> Intern:<br>${response.internName} </h1>
     <p class="idnum"> ID:${response.internId} </p>
 
-    <p class="Email"> Email:${response.internemail}</p>
+    <p class="Email">Email:${response.internemail}</p>
     <p class="num"> School:${response.schoolName}</p>
     </div>
     
@@ -133,7 +133,7 @@ inquirer.prompt([
   
   
   
-  fs.writeFile("index.html", data, function (error) {
+  fs.writeFile("index.html", data, (error) =>{
     error ? console.error(error) : console.log('success')
   })
 })

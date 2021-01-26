@@ -7,6 +7,7 @@ This is a Node.js command-line application that takes in information about emplo
 JavaScript, HTML, CSS, Node.js, jest, inquirer
 
 ### Link to view app action:
+https://drive.google.com/file/d/162cDP7srQGo7Wd76Idr7hL4n53FKbrI8/view
 
 
 ## Table of Contents
@@ -39,8 +40,7 @@ THEN I am prompted to enter the intern’s name, ID, email, and school, and I am
 WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated.
 
-/Users/purnagurung/Desktop/TeamProfileGenerator/Screen Shot 2021-01-25 at 10.02.13 PM.png
-## Installation
+
 Click npm i in your terminal to install package-log.json.
 ## tests
 To test simply run "npm run test" in your terminal after installing all modules.
