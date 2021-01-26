@@ -15,7 +15,7 @@ inquirer.prompt([
   },
   {
     type: "input",
-    name: "managerEmail",
+    name: "manageremail",
     message: "Enter your manager's email: ",
   },
   {
@@ -37,12 +37,12 @@ inquirer.prompt([
   },
   {
     type: "input",
-    name: "engineerEmail",
+    name: "engineeremail",
     message: "Enter your engineer's email: ",
   },
   {
     type: "input",
-    name: "githubUserName",
+    name: "Github",
     message: "Enter github username: ",
   },
   {
@@ -59,7 +59,7 @@ inquirer.prompt([
   },
   {
     type: "input",
-    name: "internEmail",
+    name: "internemail",
     message: "Enter your intern's email: ",
   },
   {
@@ -85,7 +85,10 @@ inquirer.prompt([
       
   </head>
   <body>
-  <div class="jumbotron jumbotron-fluid">
+  <div class="jumbotron jumbotron-fluid" background-color:blue;
+  color: rgb(25, 255, 255);
+  height: 8rem;
+  margin-bottom: 10px;>
     <div class="container">
       <h1 class="display-5 text-center">My team</h1>
 
@@ -94,26 +97,26 @@ inquirer.prompt([
   </div>
   <div class="container">
   <div class="row align-items-start">
-    <div class="col">
+    <div class="col" style="width: 18rem;  margin: 20px; padding-bottom: 20px; background-color: lightgray;">
     <h1 class="name"> Manager:<br>${response.managerName} </h1>
     <p class="idnum"> ID:${response.idNumber} </p>
 
-    <p class="Email"> Email:${response.managerEmail}</p>
+    <p class="Email"> Email:${response.manageremail}</p>
     <p class="num"> Office number:${response.managerOfficeNum}</p>
     </div>
     
-    <div class="col">
+    <div class="col" style="width: 18rem;  margin: 20px; padding-bottom: 20px; background-color: lightgray;">
     <h1 class="name"> Engineer:<br>${response.engineerName} </h1>
     <p class="idnum"> ID:${response.engineerId} </p>
 
-    <p class="Email"> Email:${response.engineerEmail}</p>
-    <p class="num"> Github:${response.githubUserName}</p>
+    <p class="Email"> Email:${response.engineeremail}</p>
+    <p class="num"> Github:${response.Github}</p>
     </div>
-    <div class="col">
+    <div class="col" style="width: 18rem;  margin: 20px; padding-bottom: 20px; background-color: lightgray;">
     <h1 class="name"> Intern:<br>${response.internName} </h1>
     <p class="idnum"> ID:${response.internId} </p>
 
-    <p class="Email"> Email:${response.internEmail}</p>
+    <p class="Email"> Email:${response.internemail}</p>
     <p class="num"> School:${response.schoolName}</p>
     </div>
     
