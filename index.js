@@ -1,3 +1,7 @@
+const Employee = require("./lib/Employee")
+const Intern = require("./lib/Intern")
+const Engineer = require("./lib/Engineer")
+const Manager = require("./lib/Manager")
 const inquirer = require("inquirer")
 const fs = require("fs")
 inquirer.prompt([
@@ -5,40 +9,89 @@ inquirer.prompt([
     type: "input",
     name: "managerName",
     message: "Enter manager's name: ",
+     validate: input=>{
+       if (input===""){
+        return "you must enter a name."
+       }
+       return true
+     }
+    
     
   },
   {
     type: "input",
     name: "idNumber",
     message: "Enter manager's id number: ",
+    validate: input=>{
+     if (isNaN(input)){
+       return "Id has to be a  number"
+      }
+      return true
+    }
     
   },
   {
     type: "input",
     name: "manageremail",
     message: "Enter your manager's email: ",
+    // tough one to validate emailaddress
+     validate: input=>{
+       var e = /\S+@\S+\.\S+/
+       if (e.test(input)===true){
+         return true
+       }
+       return "please enter valid email address"
+     }
   },
   {
     type: "input",
     name: "managerOfficeNum",
     message: "Enter the office number: ",
+    validate: input=>{
+     
+      if (isNaN(input)){
+       
+        return "Id has to be a  number"
+      }
+      return true
+    }
+
   },
   {
     type: "input",
     name: "engineerName",
     message: "Enter engineer's name: ",
+    validate: input=>{
+      if (input===""){
+       return "you must enter a name."
+      }
+      return true
+    }
     
   },
   {
     type: "input",
     name: "engineerId",
     message: "Enter engineer's id number: ",
+    validate: input=>{
+      if (isNaN(input)){
+        return "Id has to be a  number"
+       }
+       return true
+     }
     
   },
   {
     type: "input",
     name: "engineeremail",
     message: "Enter your engineer's email: ",
+    validate: input=>{
+      var e = /\S+@\S+\.\S+/
+      if (e.test(input)===true){
+        return true
+      }
+      return "please enter valid email address"
+    }
   },
   {
     type: "input",
@@ -49,23 +102,48 @@ inquirer.prompt([
     type: "input",
     name: "internName",
     message: "Enter intern's name: ",
+    validate: input=>{
+      if (input===""){
+       return "you must enter a name."
+      }
+      return true
+    }
     
   },
   {
     type: "input",
     name: "internId",
     message: "Enter intern's id number: ",
+    validate: input=>{
+      if (isNaN(input)){
+        return "Id has to be a  number"
+       }
+       return true
+     }
     
   },
   {
     type: "input",
     name: "internemail",
     message: "Enter your intern's email: ",
+    validate: input=>{
+      var e = /\S+@\S+\.\S+/
+      if (e.test(input)===true){
+        return true
+      }
+      return "please enter valid email address"
+    }
   },
   {
     type: "input",
     name: "schoolName",
     message: "which school did you graduate from? ",
+    validate: input=>{
+      if (input===""){
+       return "you must enter a school name."
+      }
+      return true
+    }
   },
   
 
@@ -101,22 +179,22 @@ inquirer.prompt([
     <h1 class="name"> Manager:<br>${response.managerName} </h1>
     <p class="idnum"> ID:${response.idNumber} </p>
 
-    <p class="Email"> Email:${response.manageremail}</p>
+    <p class="Email"><a href = "mailto: ${response.manageremail}">${response.manageremail}</a></p>
     <p class="num"> Office number:${response.managerOfficeNum}</p>
     </div>
     
     <div class="col" style="width: 18rem;  margin: 20px; padding-bottom: 20px; background-color: lightgray;">
     <h1 class="name"> Engineer:<br>${response.engineerName} </h1>
     <p class="idnum"> ID:${response.engineerId} </p>
-
-    <p class="Email">Email:${response.engineeremail}</p>
+    
+    <p class="Email"><a href = "mailto: ${response.engineeremail}">${response.engineeremail}</a></p>
     <p class="num"><a href="https://github.com/purnagurung903" target="_blank"> Github:${response.Github}</a></p>
     </div>
     <div class="col" style="width: 18rem;  margin: 20px; padding-bottom: 20px; background-color: lightgray;">
     <h1 class="name"> Intern:<br>${response.internName} </h1>
     <p class="idnum"> ID:${response.internId} </p>
 
-    <p class="Email">Email:${response.internemail}</p>
+    <p class="Email"><a href = "mailto: ${response.internemail}">${response.internemail}</a></p>
     <p class="num"> School:${response.schoolName}</p>
     </div>
     
