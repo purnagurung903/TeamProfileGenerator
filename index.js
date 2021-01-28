@@ -4,6 +4,7 @@ const Engineer = require("./lib/Engineer")
 const Manager = require("./lib/Manager")
 const inquirer = require("inquirer")
 const fs = require("fs")
+
 inquirer.prompt([
   {
     type: "input",
@@ -55,8 +56,33 @@ inquirer.prompt([
       }
       return true
     }
+    },
 
-  },
+   
+  
+
+   //function addMember(){
+    //inquirer.prompt([{
+  //  {
+  //   type: "rawlist",
+  //   name: "addMember",
+  //   message: "what type of team member would you like to add?",
+  //    choices: [
+  //      "Engineer",
+  //      "Intern",
+  //      "I dont want to add any more people",
+       
+
+       
+
+  //  ]},
+
+  
+  //  //}])
+       
+
+  // },
+  
   {
     type: "input",
     name: "engineerName",
