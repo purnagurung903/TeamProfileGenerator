@@ -7,7 +7,7 @@ This is a Node.js command-line application that takes in information about emplo
 JavaScript, HTML, CSS, Node.js, jest, inquirer
 
 ### Link to view app action:
-https://drive.google.com/file/d/162cDP7srQGo7Wd76Idr7hL4n53FKbrI8/view
+https://drive.google.com/file/d/1wIKlIn_SAPZL5Nxt2o11CKxVFWhfAtPL/view
 
 
 ## Table of Contents
